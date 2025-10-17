@@ -70,8 +70,7 @@ def eingabeBuchstabe():
   global counter
   nochmals = True
   while(nochmals != False):
-    b = input('Raten sie einen Buchstaben ')
-    b.strip() #Falls noch ein Leerzeichen eingegeben wurde
+    b = input('Raten sie einen Buchstaben ').lower().strip() #Falls noch ein Leerzeichen eingegeben wurde
 
     if(len(b) != 1):
        print("Nur einen Buchstaben bitte")
@@ -83,7 +82,6 @@ def eingabeBuchstabe():
     
     if(b not in buchstaben):
        nochmals = False
-    
 
   nochmals = False
   buchstaben.append(b)
@@ -106,7 +104,7 @@ while(erneutSpielen == True):
     buchstaben = []
     counter = 0 
     while(akzeptabel != True):
-      geheimWort = input('Geben Sie bitte das Geheimwort ein')
+      geheimWort = input('Geben Sie bitte das Geheimwort ein').lower()
       geheimWort = re.sub(r'[^A-Za-zÄÖÜäöü ]', '', geheimWort) #Bereinigen der Eingabe, sodass ein cleanes Wort übrigbleibt (Umlaute mitinbegriffen)
       if(" " not in geheimWort):
          akzeptabel = True
