@@ -1,5 +1,7 @@
 import random
 import re
+from tkinter import *
+
 HANGMANPICS = [''' ''',''' 
 
   +---+
@@ -94,7 +96,6 @@ def eingabeBuchstabe():
   else:
      counter += 1
      print("Falsch geraten")
-    
 
 
 erneutSpielen = True #Standardmässig auf true, so dass das Spiel startet. Kann vom Benutzer am Ende geändert werden
